@@ -4,7 +4,11 @@ const appRouter = express.Router();
 const axios = require('axios');
 
 server.get('/', (req, res) => {
-  res.send('Root api');
+  axios
+    .get(
+      'http://newsapi.org/v2/everything?q=bitcoin&from=2020-10-23&sortBy=publishedAt&apiKey=4007110774184dce9a8ef9ec2d7c286d'
+    )
+    .then((response) => res.send(response.data));
 });
 
 server.get('/api', (req, res) => {
