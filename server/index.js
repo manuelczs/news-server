@@ -2,6 +2,9 @@ const express = require('express');
 const server = express();
 const appRouter = express.Router();
 const axios = require('axios');
+const cors = require('cors');
+
+server.use(cors());
 
 server.get('/', (req, res, next) => {
   axios
