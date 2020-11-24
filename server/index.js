@@ -6,18 +6,10 @@ const cors = require('cors');
 
 server.use(cors());
 
-server.get('/', (req, res, next) => {
+server.get('/', (req, res) => {
   axios
     .get(
-      'https://newsapi.org/v2/everything?q=bitcoin&from=2020-10-23&sortBy=publishedAt&apiKey=4007110774184dce9a8ef9ec2d7c286d'
-    )
-    .then((response) => res.status(200).send(response.data));
-});
-
-server.get('/api', (req, res) => {
-  axios
-    .get(
-      'https://newsapi.org/v2/everything?q=bitcoin&from=2020-10-23&sortBy=publishedAt&apiKey=4007110774184dce9a8ef9ec2d7c286d'
+      'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4007110774184dce9a8ef9ec2d7c286d'
     )
     .then((response) => res.status(200).send(response.data));
 });
