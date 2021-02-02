@@ -7,7 +7,7 @@ const router = express.Router();
 
 server.use(cors());
 
-router.get('/', (req, res) => {
+router.get('/news1', (req, res) => {
   axios
     .get(
       'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4007110774184dce9a8ef9ec2d7c286d'
