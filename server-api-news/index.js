@@ -23,7 +23,7 @@ router.get('/news2', (req, res) => {
     .then((response) => res.status(200).send(response.data));
 });
 
-server.use('/', router);
+server.use('/api', router);
 
 server.listen(3002, () => {
   console.log('Port 3002');
