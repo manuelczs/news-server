@@ -25,6 +25,10 @@ router.get('/news2', (req, res) => {
 
 server.use('/', router);
 
+server.get('/', (req, res) => {
+  res.send('Welcome to my API');
+});
+
 server.listen(3002, () => {
   console.log('Port 3002');
 });
