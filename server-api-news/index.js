@@ -4,7 +4,7 @@ const appRouter = express.Router();
 const axios = require('axios');
 const cors = require('cors');
 const router = express.Router();
-
+server.use('/', router);
 server.use(cors());
 
 router.get('/news1', (req, res) => {
@@ -22,8 +22,6 @@ router.get('/news2', (req, res) => {
     )
     .then((response) => res.status(200).send(response.data));
 });
-
-server.use('/', router);
 
 server.get('/', (req, res) => {
   res.send('Welcome to my API');
