@@ -18,7 +18,7 @@ router.get('/news1', (req, res) => {
 router.get('/news2', (req, res) => {
   axios
     .get(
-      'http://newsapi.org/v2/everything?q=tesla&from=2021-01-02&sortBy=publishedAt&apiKey=4007110774184dce9a8ef9ec2d7c286d'
+      'http://newsapi.org/v2/everything?q=apple&from=2021-02-02&to=2021-02-02&sortBy=popularity&apiKey=4007110774184dce9a8ef9ec2d7c286d'
     )
     .then((response) => res.status(200).send(response.data));
 });
