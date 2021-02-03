@@ -21,13 +21,15 @@ server.get('/:request', (req, res) => {
       .get(
         `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`
       )
-      .then((response) => res.status(200).json(response.data));
+      .then((response) => res.status(200).json(response.data))
+      .catch((err) => console.log(err));
   } else if (request === 'news2') {
     axios
       .get(
         `http://newsapi.org/v2/everything?q=apple&from=2021-02-02&to=2021-02-02&sortBy=popularity&apiKey=${API_KEY}`
       )
-      .then((response) => res.status(200).json(response.data));
+      .then((response) => res.status(200).json(response.data))
+      .catch((err) => console.log(err));
   }
 });
 
