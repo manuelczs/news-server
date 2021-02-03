@@ -7,6 +7,10 @@ const API_KEY = '4007110774184dce9a8ef9ec2d7c286d';
 
 server.use(cors());
 
+router.get('/', (req, res) => {
+  res.status(200).send('News API');
+});
+
 router.get('/news1', (req, res) => {
   axios
     .get(
