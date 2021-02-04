@@ -13,9 +13,7 @@ server.use(bodyParser.json());
 server.get('/', (req, res) => {
   const news = { news1: '', news2: '' };
   axios
-    .get(
-      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`
-    )
+    .get(`http://newsapi.org/v2/everything?domains=wsj.com&apiKey=${API_KEY}`)
     .then((response) => (news.news1 = response.data))
     .catch((err) => console.log(err))
     .then(
