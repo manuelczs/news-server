@@ -3,7 +3,7 @@
 
 ## Brief description
 
-A small server to retrieve news from https://newsapi.org
+A small server to get last news from https://newsapi.org
 
 </br>
 
