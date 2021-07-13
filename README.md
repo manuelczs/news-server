@@ -22,7 +22,7 @@ Using HTTPS:
 
 When cloning finished, navigate to the folder **news-server** typing:
 
-    cd your-local-folder/news-server
+    cd your-folder-path/news-server
 
 and then type:
 
