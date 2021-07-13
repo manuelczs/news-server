@@ -65,3 +65,7 @@ This script will run the server at the following address:
 Now you can test the server using a browser or Postman with the address https://localhost:3000 
 
 </br>
+
+## Screenshots
+
+![Screenshot from 2021-07-13 20-24-49](https://user-images.githubusercontent.com/20391891/125537934-c25188ab-1e1b-4b84-988f-8c028d61cb10.png)
